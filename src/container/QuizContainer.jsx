@@ -78,7 +78,7 @@ const QuizContainer = () => {
 
       {!isQuizSubmitted ? (
         <div className="flex flex-col w-full justify-center md:flex-row p-5">
-          <div className="bg-white p-5 rounded-lg md:container w-full md:w-8/12 h-96 shadow-lg md:m-5">
+          <div className="bg-white p-5 rounded-lg md:container w-full md:w-8/12 md:h-96 shadow-lg md:m-5">
             <Quiz
               timeAlloted={timeAlloted}
               quizDataQuestions={quizDataQuestions}

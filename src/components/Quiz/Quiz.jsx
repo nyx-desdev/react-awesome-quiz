@@ -17,11 +17,11 @@ const Quiz = ({
   return (
     <div>
       <div className="flex justify-between items-center">
-        <h1 className="text-center font-semibold text-2xl text-blue-900">
+        <h1 className="text-center font-semibold md:text-2xl text-blue-900">
           Attempt Questions Here
         </h1>
         <p className="flex items-center">
-          <BsFillAlarmFill className="mr-2 h-5 text-blue-900" />{" "}
+          <BsFillAlarmFill className="mr-1 md:mr-2 h-5 text-blue-900" />{" "}
           <span>
             {minutes} min : {seconds} sec
           </span>
