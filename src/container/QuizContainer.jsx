@@ -70,6 +70,17 @@ const QuizContainer = () => {
     calculateScore();
     setIsQuizSubmitted(true);
   };
+
+  const changeQuestion = (questionNo) => {
+    console.log("cchanging", questionNo);
+    setCurrentQuestion(questionNo);
+  };
+
+  const retakeTest = () => {
+    console.log("retaking test");
+    window.location.reload();
+  };
+
   return (
     <>
       <h1 className="text-center font-bold text-4xl p-10 text-blue-900">
@@ -95,13 +106,17 @@ const QuizContainer = () => {
             />
           </div>
           <div className="bg-white p-5 rounded-lg md:container w-full md:w-60 h-96 shadow-lg mt-5 md:m-5">
-            <ReviewBoard quizDataQuestions={quizDataQuestions} />
+            <ReviewBoard
+              changeQuestion={changeQuestion}
+              quizDataQuestions={quizDataQuestions}
+            />
           </div>
         </div>
       ) : (
         <div className="flex flex-col w-full justify-center md:flex-row p-5">
           <div className="bg-white p-5 rounded-lg md:container w-full md:w-8/12 h-96 shadow-lg">
             <QuizResult
+              retakeTest={retakeTest}
               totalQuestions={quizDataQuestions.length}
               correctCount={correctCount}
             />

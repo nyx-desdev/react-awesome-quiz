@@ -1,7 +1,7 @@
 import React from "react";
 import { TiTickOutline } from "react-icons/ti";
 
-const QuizResult = ({ totalQuestions, correctCount }) => {
+const QuizResult = ({ totalQuestions, correctCount, retakeTest }) => {
   return (
     <div>
       <span className="flex items-center justify-center">
@@ -18,6 +18,12 @@ const QuizResult = ({ totalQuestions, correctCount }) => {
       </p>
       <p className="text-center text-blue-900 my-4">
         Your Score: {((correctCount / totalQuestions) * 100).toFixed(2)}%
+      </p>
+      <p
+        className="text-center my-4 py-2 bg-slate-500 text-white cursor-pointer"
+        onClick={() => retakeTest()}
+      >
+        Retake Test
       </p>
     </div>
   );
